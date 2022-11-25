@@ -16,10 +16,10 @@
       root = ./.;
       overrides = {
         shell = common: prev: {
-          packages = prev.packages ++ [
-            common.pkgs.rust-analyzer
-            common.pkgs.cargo-watch
-          ];
+          packages = prev.packages ++ (with common.pkgs; [
+            rust-analyzer
+            cargo-watch
+          ]);
         };
       };
     };

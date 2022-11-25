@@ -1,0 +1,23 @@
+* Advent of Code in Rust
+
+** Prerequisites
+
++ [[https://nixos.wiki/wiki/Flakes][Nix with flakes enabled]]
+
+** Getting Started
+
+From the root of the repository, use =direnv= to enter the devshell:
+
+#+begin_src shell
+direnv allow
+#+end_src
+
+..then use the =menu= shortcut to get a list of available commands.
+
+#+begin_src shell
+menu
+#+end_src
+
+** Nix
+
+This project uses [[https://github.com/yusdacra/nix-cargo-integration][nix-cargo-integration]] to manage the =cargo= Rust project.

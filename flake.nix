@@ -1,8 +1,5 @@
-# This file is pretty general, and you can adapt it in your project replacing
-# only `name` and `description` below.
-
 {
-  description = "My awesome Rust project";
+  description = "Advent of Code solutions in Rust";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -10,14 +7,12 @@
       url = "github:edolstra/flake-compat";
       flake = false;
     };
-    nci.url = "github:yusdacra/nix-cargo-integration";
+    nci.url = "github:yusdacra/nix-cargo-integration?rev=333fa0edf43e8047832eb23f86bb12954e1f0d1e";
     nci.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = { self, nixpkgs, nci, ... }:
     nci.lib.makeOutputs {
-      # Documentation and examples:
-      # https://github.com/yusdacra/rust-nix-templater/blob/master/template/flake.nix
       root = ./.;
       overrides = {
         shell = common: prev: {

@@ -1,11 +1,8 @@
 [package]
-authors = ["Sridhar Ratnakumar <srid@srid.ca>"]
+authors = ["Tyler Langlois"]
 edition = "2018"
-# If you change the name here, you must also do it in flake.nix (and run `cargo generate-lockfile` afterwards)
-name = "rust-nix-template"
+name = "aoc-rs"
 version = "0.1.0"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 clap = "2.33.3"
@@ -13,7 +10,6 @@ clap = "2.33.3"
 [package.metadata.nix]
 app = true
 build = true
-library = true
 systems = [
     "aarch64-linux",
     "aarch64-darwin",

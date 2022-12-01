@@ -7,6 +7,7 @@ version = "0.1.0"
 [dependencies]
 clap = "2.33.3"
 itertools = "0.10.5"
+pom = "3.2.0"
 structopt = "0.3.26"
 
 [package.metadata.nix]

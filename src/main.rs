@@ -3,6 +3,7 @@ use std::path::PathBuf;
 use structopt::StructOpt;
 
 mod y2020;
+mod y2022;
 
 #[derive(StructOpt)]
 #[structopt(about = "Advent of Code solutions")]
@@ -29,6 +30,14 @@ fn main() {
         (2020, 1, 'b') => {
             let input = fs::read_to_string(args.input).unwrap();
             println!("{:?}", y2020::day01::part_b(&input));
+        }
+        (2022, 1, 'a') => {
+            let input = fs::read_to_string(args.input).unwrap();
+            println!("{:?}", y2022::day01::part_a(input));
+        }
+        (2022, 1, 'b') => {
+            let input = fs::read_to_string(args.input).unwrap();
+            println!("{:?}", y2022::day01::part_b(input));
         }
         (year, day, part) => {
             println!("Can't handle {} day {} part {}", year, day, part)

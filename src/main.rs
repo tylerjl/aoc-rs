@@ -5,7 +5,7 @@ use structopt::StructOpt;
 mod y2020;
 
 #[derive(StructOpt)]
-#[structopt(about="Advent of Code solutions")]
+#[structopt(about = "Advent of Code solutions")]
 struct Cli {
     /// Year for desired solution
     year: usize,
